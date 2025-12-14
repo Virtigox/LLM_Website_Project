@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizing LLMs | Self-Hosting for Privacy</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="deploy-theme">
+    <header class="deploy-hero" aria-labelledby="deploy-hero-heading">
+        <div class="deploy-hero-left">
+            <img src="logos/OpenSource_logo.png" alt="Open-source lock logo" class="deploy-hero-logo" loading="lazy">
+            <div class="deploy-hero-copy">
+                <span class="deploy-hero-kicker">Secure autonomy</span>
+                <h1 class="deploy-hero-heading" id="deploy-hero-heading">
+                    <span class="deploy-heading-primary">Localizing LLMs</span>
+                    <span class="deploy-heading-sub">Self-Hosting for Privacy &amp; Control</span>
+                </h1>
+                <p class="deploy-hero-subline">
+                    Take ownership of your AI stack by running inference close to your data. Local deployments keep sensitive prompts on hardware you trust while eliminating rate limits from third-party APIs.
+                </p>
+            </div>
+        </div>
+        <div class="deploy-hero-right" aria-hidden="true">
+            <img src="logos/private_server.jpg" alt="Self-hosted server badge" class="deploy-hero-badge" loading="lazy">
+        </div>
+    </header>
+    <div class="nav-dropdown floating-nav">
+        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="site-nav-dropdown-deploy" title="Quick navigation">
+            <span class="icon-books" aria-hidden="true">📚</span>
+            <span class="dropdown-label">Pages</span>
+        </button>
+        <div id="site-nav-dropdown-deploy" class="dropdown-menu" role="menu" aria-label="Select a page">
+            <a role="menuitem" href="index.html">LLM Home</a>
+            <a role="menuitem" href="RAG-VectorDB.html">RAG &amp; Vector DBs</a>
+            <a role="menuitem" href="Localizing-Deployment.html">Localizing LLMs</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="deploy-section deploy-section--intro">
+            <div class="deploy-panel deploy-panel--split">
+                <div class="deploy-panel-copy">
+                    <h2>Why Run Locally?</h2>
+                    <p>
+                        Local hosting keeps prompts, responses, and logs on infrastructure you manage. It is ideal for regulated teams, research labs, and makers who want to iterate freely without exposing intellectual property to external providers.
+                    </p>
+
+                    <div class="deploy-panel-divider" aria-hidden="true"></div>
+
+                    <h3>🔑 Primary Benefits of Running LLMs Locally</h3>
+                    <p>Running a model locally offers several key advantages for individuals and small businesses:</p>
+                    <ol>
+                        <li><strong>Data Privacy:</strong> All data processing stays on your machine, which is critical for sensitive information.</li>
+                        <li><strong>Cost Control:</strong> <em>Once the hardware is acquired</em>, there are no recurring per-token API costs.</li>
+                        <li><strong>Latency:</strong> Responses can be faster, as there is no network delay communicating with a remote server.</li>
+                    </ol>
+                </div>
+                <figure class="deploy-figure">
+                    <img src="pictures/localizing_on_own_device.png" alt="Secure rack of on-premises servers" loading="lazy">
+                    <figcaption>Self-hosting protects proprietary prompts and datasets within your own environment.</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section class="deploy-theatre" aria-labelledby="deploy-theatre-heading">
+            <div class="deploy-theatre-frame">
+                <h2 class="deploy-theatre-heading" id="deploy-theatre-heading">Creator Perspective: Running a Personal AI Stack</h2>
+                <iframe
+                    class="deploy-theatre-iframe"
+                    src="https://www.youtube.com/embed/qw4fDU18RcU"
+                    title="PewDiePie on running his own AI"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <section class="deploy-section deploy-section--techniques">
+            <div class="deploy-panel">
+                <h2>Techniques for Local Deployment</h2>
+                <p>
+                    To make large models runnable on consumer hardware, a technique called <strong>quantization</strong> is often used. Quantization reduces the precision of the model's weights (e.g., from 16-bit to 4-bit), significantly reducing the memory footprint while maintaining acceptable performance. This is crucial for enabling local LLM use.
+                </p>
+
+                <h3>🛠️ Common Tools and Frameworks</h3>
+                <div class="deploy-table-wrapper">
+                    <table class="deploy-tools-table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Tool</th>
+                                <th scope="col">Main use case</th>
+                                <th scope="col">Interface type</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">LM Studio</th>
+                                <td>Run and test models locally</td>
+                                <td>Desktop GUI + API</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Jan</th>
+                                <td>Offline ChatGPT-style local assistant</td>
+                                <td>Desktop GUI + API</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Ollama</th>
+                                <td>Simple local deployment and APIs</td>
+                                <td>CLI + HTTP API</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">text-gen-webui</th>
+                                <td>Web UI and light fine-tuning</td>
+                                <td>Browser UI</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">llama.cpp</th>
+                                <td>Low-resource local inference backend</td>
+                                <td>CLI / library</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">vLLM</th>
+                                <td>High-throughput model serving</td>
+                                <td>Python / server</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">GPT4All</th>
+                                <td>One-click local chat with models</td>
+                                <td>Desktop GUI + CLI</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">LocalAI</th>
+                                <td>Self-hosted OpenAI-style API</td>
+                                <td>HTTP API</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <section class="deploy-section deploy-section--hardware">
+            <div class="deploy-panel deploy-panel--split">
+                <div class="deploy-panel-copy">
+                    <h2>Hardware Considerations</h2>
+                    <p>
+                        While highly-quantized models can run on CPUs, having a dedicated <strong>Graphics Processing Unit (GPU)</strong> with sufficient VRAM is essential for running larger models or achieving high performance.
+                    </p>
+                    <ul>
+                        <li><strong>GPU VRAM:</strong> Aim for at least 12 GB for smooth 13B parameter model inference; 24 GB supports 30B-class models.</li>
+                        <li><strong>System RAM:</strong> 32 GB keeps multiple processes responsive when loading large context windows.</li>
+                        <li><strong>Storage:</strong> Fast NVMe SSDs dramatically reduce model load times and speed up fine-tuning workflows.</li>
+                    </ul>
+                    <p>
+                        If you are experimenting with compact 7B models, start with CPU-only inference to validate your pipeline, then scale up to GPU acceleration as context sizes grow.
+                    </p>
+                </div>
+                <figure class="deploy-figure">
+                    <img src="pictures/AI_Hardware_Rack.png" alt="Close-up of GPU hardware" loading="lazy">
+                    <figcaption>Consumer GPUs with ample VRAM comfortably serve 7B–13B parameter local assistants.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>This is page 3 of 3. Explore other topics using the navigation above.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

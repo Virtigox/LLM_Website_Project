@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RAG & Vector DB | Implementation for Business</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="rag-theme">
+    <header class="rag-hero" aria-labelledby="rag-hero-heading">
+        <div class="rag-hero-title-block">
+            <img src="logos/RAG_logo.jpg" alt="RAG logomark" class="rag-hero-logo" loading="lazy">
+            <div class="rag-hero-copy">
+                <span class="rag-hero-kicker">Retrieval-Augmented Generation</span>
+                <h1 class="rag-hero-heading" id="rag-hero-heading">
+                    <span class="rag-heading-primary">RAG</span>
+                    <span class="rag-heading-divider" aria-hidden="true"></span>
+                    <span class="rag-heading-secondary">Vector Database</span>
+                </h1>
+                <p class="rag-hero-subline">Fusing contextual retrieval with fast semantic search</p>
+            </div>
+        </div>
+        <div class="rag-hero-badge" aria-hidden="true">
+            <img src="logos/vectorDB_logo.jpg" alt="Vector database logomark" class="rag-badge-logo" loading="lazy">
+        </div>
+    </header>
+
+    <!-- Floating navigation button (replaces inline nav) -->
+    <div class="nav-dropdown floating-nav">
+        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="site-nav-dropdown-rag" title="Quick navigation">
+            <span class="icon-books" aria-hidden="true">📚</span>
+            <span class="dropdown-label">Pages</span>
+        </button>
+        <div id="site-nav-dropdown-rag" class="dropdown-menu" role="menu" aria-label="Select a page">
+            <a role="menuitem" href="index.html">LLM Home</a>
+            <a role="menuitem" href="RAG-VectorDB.html">RAG & Vector DBs</a>
+            <a role="menuitem" href="Localizing-Deployment.html">Localizing LLMs</a>
+        </div>
+    </div>
+
+    <main>
+        <section class="rag-section rag-section--why">
+            <div class="rag-panel">
+                <h2>Why RAG Is Essential for Business Use</h2>
+                <p>
+                    When an LLM is used directly, its knowledge is limited to its training data, which can lead to outdated outputs or hallucinated facts. <strong>Retrieval-Augmented Generation (RAG)</strong> mitigates those risks by letting the model reference your freshest knowledge base, ensuring that every response is grounded in verifiable context.
+                </p>
+            </div>
+        </section>
+
+        <section class="rag-section rag-section--vector">
+            <div class="rag-panel">
+                <h2>The Role of the Vector Database</h2>
+                <p>
+                    A <strong>Vector Database</strong> stores high-dimensional embeddings that capture the meaning of your documents. Each question is converted into a similar embedding, allowing the system to surface the most relevant passages in milliseconds—even across millions of records.
+                </p>
+                <h3>Key Concepts in Vector Storage</h3>
+                <ul>
+                    <li><strong>Embedding Model:</strong> Converts unstructured data into numerical vectors that encode semantics.</li>
+                    <li><strong>Chunking:</strong> Breaks large documents into digestible passages that improve recall and precision.</li>
+                    <li><strong>Similarity Search:</strong> Uses metrics like cosine similarity to pinpoint the closest matches to the query vector.</li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="rag-section rag-section--process">
+            <div class="rag-panel">
+                <h2>RAG Process Steps</h2>
+                <p>The typical flow for a RAG-powered experience is streamlined and repeatable:</p>
+                <ol>
+                    <li><strong>Query Conversion:</strong> Transform the user's question into a vector embedding.</li>
+                    <li><strong>Retrieval:</strong> Search the vector database for the closest document embeddings.</li>
+                    <li><strong>Augmentation:</strong> Combine the best matching passages with the original prompt.</li>
+                    <li><strong>Generation:</strong> Ask the LLM to answer using the augmented context, producing accurate, grounded output.</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>This is page 2 of 3. Explore other topics using the navigation above.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

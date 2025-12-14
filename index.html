@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Home | Large Language Models</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body class="llm-theme">
+    <header class="hero" aria-labelledby="hero-heading">
+        <div class="hero-topline">
+            <div class="hero-primary">
+                <span class="hero-kicker">Foundations of Generative AI</span>
+                <h1 class="hero-heading" id="hero-heading">
+                    <span class="hero-heading-primary">Large Language Models</span>
+                    <span class="hero-heading-sub">Understanding the minds behind modern AI</span>
+                </h1>
+            </div>
+            <div class="hero-emblem" aria-hidden="true">
+                <img class="hero-emblem-glow" src="pictures/LLM_Architecture.png" alt="LLM Brain" />
+            </div>
+        </div>
+
+        <div class="logo-scroll-container">
+            <div class="logo-scroll" id="logo-slider">
+                <a class="logo-badge" href="https://openai.com" target="_blank" rel="noopener noreferrer" aria-label="OpenAI homepage">
+                    <img src="logos/openai.svg" alt="OpenAI Logo">
+                </a>
+                <a class="logo-badge" href="https://gemini.google.com" target="_blank" rel="noopener noreferrer" aria-label="Google Gemini homepage">
+                    <img src="logos/gemini.svg" alt="Google Gemini Logo">
+                </a> 
+                <a class="logo-badge" href="https://ai.meta.com/llama/" target="_blank" rel="noopener noreferrer" aria-label="Meta Llama homepage">
+                    <img src="logos/llama.svg" alt="Meta Logo (Llama)">
+                </a>
+                <a class="logo-badge" href="https://www.anthropic.com" target="_blank" rel="noopener noreferrer" aria-label="Anthropic homepage">
+                    <img src="logos/claude.svg" alt="Anthropic Logo (Claude)">
+                </a>
+                <a class="logo-badge" href="https://mistral.ai" target="_blank" rel="noopener noreferrer" aria-label="Mistral AI homepage">
+                    <img src="logos/mistral.svg" alt="Mistral AI Logo">
+                </a>
+                <a class="logo-badge" href="https://www.perplexity.ai/" target="_blank" rel="noopener noreferrer" aria-label="Perplexity AI homepage">
+                    <img src="logos/perplexity.svg" alt="Perplexity AI Logo">
+                </a>
+                <a class="logo-badge" href="https://x.ai/" target="_blank" rel="noopener noreferrer" aria-label="xAI Grok homepage">
+                    <img src="logos/grok.svg" alt="Grok (xAI) Logo">
+                </a>
+            </div>
+        </div>
+
+    </header>
+
+    <!-- Floating navigation button (replaces inline nav) -->
+    <div class="nav-dropdown floating-nav">
+        <button class="dropdown-trigger" aria-haspopup="true" aria-expanded="false" aria-controls="site-nav-dropdown" title="Quick navigation">
+            <span class="icon-books" aria-hidden="true">📚</span>
+            <span class="dropdown-label">Pages</span>
+        </button>
+        <div id="site-nav-dropdown" class="dropdown-menu" role="menu" aria-label="Select a page">
+            <a role="menuitem" href="LLM-Home.html">LLM Home</a>
+            <a role="menuitem" href="RAG-VectorDB.html">RAG & Vector DBs</a>
+            <a role="menuitem" href="Localizing-Deployment.html">Localizing LLMs</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Section 1: Introduction to LLMs with background -->
+        <section class="content-section intro-section">
+            <div class="content-panel">
+                <h2>
+                    <a href="https://lktuan.github.io/blog/2024-12-12-intro-llm/" target="_blank" rel="noopener noreferrer">
+                        Introduction to LLMs
+                    </a>
+                </h2>
+                <p>Large Language Models (LLMs) are a class of deep learning models designed to understand, generate, and manipulate human language. They are trained on large-scale datasets, such as text scraped from the internet, academic papers, novels, and articles, allowing them to capture core knowledge and patterns that reflect human language and society.</p>
+            </div>
+        </section>
+
+        <!-- Theatre-style video section -->
+        <section class="theatre" aria-label="LLM overview video">
+            <div class="theatre-frame">
+                <iframe
+                    class="theatre-iframe"
+                    src="https://www.youtube.com/embed/LPZh9BOjkQs"
+                    title="LLM Overview"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture;"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+
+        <!-- Section 2: The Transformer Architecture with background -->
+        <section class="content-section transformer-section">
+            <div class="content-panel">
+                <h2>
+                    <a href="https://poloclub.github.io/transformer-explainer/" target="_blank" rel="noopener noreferrer">
+                        The Transformer Architecture
+                    </a>
+                </h2>
+                <p>The foundation of modern LLMs is the <strong>Transformer architecture</strong>, which utilizes a mechanism called self-attention. This allows the model to weigh the importance of different words in the input text when processing any single word, dramatically improving its ability to understand context and long-range dependencies in language. This key innovation is what enabled the rapid advancement of generative AI.</p>
+            </div>
+        </section>
+
+        <!-- Section 3: Key Capabilities and Examples with background -->
+        <section class="content-section capabilities-section">
+            <div class="content-panel">
+                <h2>Capabilities and Usage Highlights</h2>
+                <ul class="llm-highlight-list">
+                    <li>
+                        <h3>🚀 Key Capabilities of LLMs</h3>
+                        <p>The core strengths of LLMs fall into six major categories that cover comprehension, creation, and structured reasoning.</p>
+                        <ul class="llm-sublist">
+                            <li><strong>Text Understanding:</strong> Interpret complex documents, extract key points, answer questions, and follow multi-step instructions.</li>
+                            <li><strong>Text Generation:</strong> Produce coherent output—stories, reports, emails, and dialogue—tailored to tone and audience.</li>
+                            <li><strong>Code Handling:</strong> Serve as coding copilots by generating snippets, refactoring, writing tests, and explaining APIs.</li>
+                            <li><strong>Reasoning &amp; Planning:</strong> Break down complex problems, compare options, and craft structured plans or checklists.</li>
+                            <li><strong>Translation &amp; Localization:</strong> Translate between languages, adapt style for different cultures, and keep terminology consistent.</li>
+                            <li><strong>Data Transformation:</strong> Convert unstructured text into lists, tables, or JSON; summarize logs; and label passages with tags.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>📜 Examples of LLM Types</h3>
+                        <p>Open and proprietary ecosystems provide varied tradeoffs for customization, performance, and governance.</p>
+                        <p><strong>Open-Source Models (Western):</strong></p>
+                        <ul class="llm-sublist">
+                            <li><strong>Llama family:</strong> General-purpose models designed for fine-tuning on private data.</li>
+                            <li><strong>Mistral:</strong> Efficient text generation optimized for smaller hardware footprints.</li>
+                            <li><strong>Falcon:</strong> High-performing models released under permissive licenses for commercial reuse.</li>
+                        </ul>
+                        <p><strong>Open-Source Models (Chinese):</strong></p>
+                        <div class="llm-note">Chinese open-source models represented roughly 13% of global AI usage this year.</div>
+                        <ul class="llm-sublist">
+                            <li><strong>Qwen series:</strong> Dense and MoE variants with strong multilingual and multimodal support.</li>
+                            <li><strong>DeepSeek:</strong> Mixture-of-Experts architectures tuned for mathematical reasoning and coding.</li>
+                            <li><strong>Kimi series:</strong> Ultra-long 128K-token context windows with multimodal input support.</li>
+                        </ul>
+                        <p><strong>Proprietary Models:</strong></p>
+                        <ul class="llm-sublist">
+                            <li><strong>GPT-4 class:</strong> Broad general reasoning, coding, and creative capabilities.</li>
+                            <li><strong>Claude:</strong> Long-context analysis with safety-aligned dialogue and drafting.</li>
+                            <li><strong>Gemini:</strong> Multimodal workflows across text, imagery, and code.</li>
+                        </ul>
+                    </li>
+                    <li>
+                        <h3>🌐 General Applications Across Industries</h3>
+                        <p>LLMs are reshaping daily workflows by automating drafting, analysis, and decision-support tasks.</p>
+                        <ul class="llm-sublist">
+                            <li><strong>Content Creation &amp; Communication:</strong> Draft articles, emails, documentation, and adapt messages for multiple channels.</li>
+                            <li><strong>Software Development:</strong> Act as pair programmers to scaffold features, explain APIs, and generate tests.</li>
+                            <li><strong>Customer Service &amp; Operations:</strong> Power virtual agents, summarize tickets, and suggest responses for human agents.</li>
+                            <li><strong>Knowledge Management &amp; Research:</strong> Condense reports, meeting transcripts, and research papers into quick briefs.</li>
+                            <li><strong>Business Productivity:</strong> Automate status reports, agendas, and convert raw inputs into polished presentations.</li>
+                        </ul>
+                        <div class="llm-note">
+                            <strong>🌟 Emerging &amp; Advanced Uses:</strong> Multimodal interaction, workflow orchestration across tools and APIs, and privacy-aware personalization will define next-generation deployments.
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+    
+    <footer>
+        <div class="footer-meta">
+            <div class="footer-item">
+                <span class="footer-label">Last Update</span>
+                <span class="footer-value" id="last-update-date" aria-live="polite">2025-12-13</span>
+            </div>
+            <div class="footer-item">
+                <span class="footer-label">Contact</span>
+                <a class="footer-value" data-type="link" href="nyanlinhtunnlh873@gmail.com">nyanlinhtunnlh873@gmail.com</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
