@@ -1,4 +1,4 @@
-// Enhance logo scroller: duplicate track for seamless looping and add hover pause via JS
+// logo scroller: duplicate track for seamless looping and add hover pause 
 document.addEventListener('DOMContentLoaded', () => {
 	const containers = document.querySelectorAll('.logo-scroll-container');
 	containers.forEach(container => {
@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			}
 		});
 
-		// JS-controlled pause on hover for smoother control across browsers
+		// pause on hover for smoother control across browsers
 		container.addEventListener('mouseenter', () => {
 			tracks.forEach(track => {
 				track.style.animationPlayState = 'paused';
