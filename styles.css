@@ -580,11 +580,10 @@ footer::before {
     position: relative;
     margin: 0;
     padding: clamp(32px, 7vw, 70px) clamp(20px, 8vw, 96px);
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.85fr);
     align-items: center;
-    justify-content: space-between;
-    gap: clamp(24px, 6vw, 64px);
+    gap: clamp(28px, 6vw, 72px);
     background: linear-gradient(135deg, rgba(0, 230, 118, 0.14), rgba(10, 24, 24, 0.92));
     border-bottom: 1px solid rgba(0, 230, 118, 0.2);
     overflow: hidden;
@@ -602,14 +601,15 @@ footer::before {
 
 .rag-theme .rag-hero-title-block {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: clamp(20px, 5vw, 40px);
+    gap: clamp(20px, 4.5vw, 38px);
     z-index: 1;
 }
 
 .rag-theme .rag-hero-logo {
-    width: clamp(72px, 12vw, 132px);
+    width: clamp(64px, 10vw, 120px);
     height: auto;
     filter: drop-shadow(0 12px 30px rgba(0, 0, 0, 0.45));
 }
@@ -618,7 +618,7 @@ footer::before {
     display: flex;
     flex-direction: column;
     gap: 12px;
-    max-width: 520px;
+    max-width: clamp(420px, 52vw, 600px);
     z-index: 1;
 }
 
@@ -631,32 +631,13 @@ footer::before {
 
 .rag-theme .rag-hero-heading {
     margin: 0;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: clamp(16px, 4vw, 34px);
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-}
-
-.rag-theme .rag-heading-primary {
-    font-size: clamp(48px, 10vw, 96px);
+    font-size: clamp(52px, 9vw, 96px);
     font-weight: 700;
     color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    line-height: 1.05;
     text-shadow: 0 0 24px rgba(0, 230, 118, 0.32);
-}
-
-.rag-theme .rag-heading-divider {
-    width: clamp(48px, 9vw, 88px);
-    height: 2px;
-    background: linear-gradient(90deg, rgba(0, 230, 118, 0.5), rgba(0, 230, 118, 0));
-    align-self: center;
-}
-
-.rag-theme .rag-heading-secondary {
-    font-size: clamp(34px, 7vw, 68px);
-    font-weight: 600;
-    color: var(--text);
 }
 
 .rag-theme .rag-hero-subline {
@@ -667,6 +648,7 @@ footer::before {
 
 .rag-theme .rag-hero-badge {
     position: relative;
+    justify-self: center;
     z-index: 1;
     padding: 20px 28px;
     border-radius: 18px;
@@ -677,7 +659,7 @@ footer::before {
 
 .rag-theme .rag-badge-logo {
     display: block;
-    width: clamp(160px, 18vw, 240px);
+    width: clamp(150px, 16vw, 220px);
     height: auto;
 }
 
@@ -777,20 +759,25 @@ footer::before {
 
 @media (max-width: 960px) {
     .rag-theme .rag-hero {
-        justify-content: center;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
     .rag-theme .rag-hero-title-block {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .rag-theme .rag-hero-copy {
+        align-items: center;
     }
 
     .rag-theme .rag-hero-heading {
-        justify-content: center;
+        text-align: center;
     }
 
     .rag-theme .rag-hero-badge {
-        margin-inline: auto;
+        justify-self: center;
     }
 }
 
@@ -817,10 +804,10 @@ footer::before {
     position: relative;
     margin: 0;
     padding: clamp(34px, 8vw, 86px) clamp(24px, 9vw, 110px);
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1.35fr) minmax(220px, 0.85fr);
     align-items: center;
-    justify-content: space-between;
-    gap: clamp(28px, 6vw, 72px);
+    gap: clamp(32px, 7vw, 80px);
     background: linear-gradient(135deg, rgba(0, 230, 118, 0.2), rgba(6, 20, 20, 0.92));
     border-bottom: 1px solid rgba(0, 230, 118, 0.2);
     overflow: hidden;
@@ -838,14 +825,15 @@ footer::before {
 
 .deploy-hero-left {
     position: relative;
-    display: flex;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: center;
-    gap: clamp(24px, 5vw, 44px);
+    gap: clamp(20px, 4.5vw, 38px);
     z-index: 1;
 }
 
 .deploy-hero-logo {
-    width: clamp(88px, 14vw, 140px);
+    width: clamp(80px, 12vw, 132px);
     height: auto;
     filter: drop-shadow(0 16px 40px rgba(0, 0, 0, 0.55));
 }
@@ -854,7 +842,7 @@ footer::before {
     display: flex;
     flex-direction: column;
     gap: 14px;
-    max-width: 540px;
+    max-width: clamp(420px, 50vw, 600px);
 }
 
 .deploy-hero-kicker {
@@ -866,22 +854,11 @@ footer::before {
 
 .deploy-hero-heading {
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-}
-
-.deploy-heading-primary {
-    font-size: clamp(46px, 8.8vw, 82px);
+    font-size: clamp(48px, 9vw, 88px);
     text-transform: uppercase;
     letter-spacing: 0.06em;
     color: var(--accent);
     text-shadow: 0 0 26px rgba(0, 230, 118, 0.28);
-}
-
-.deploy-heading-sub {
-    font-size: clamp(20px, 4vw, 30px);
-    color: var(--text);
 }
 
 .deploy-hero-subline {
@@ -897,10 +874,11 @@ footer::before {
 
 .deploy-hero-badge {
     display: block;
-    width: clamp(220px, 34vw, 320px);
+    width: clamp(200px, 30vw, 300px);
     border-radius: 28px;
     border: 1px solid rgba(0, 230, 118, 0.24);
     box-shadow: 0 30px 65px rgba(0, 0, 0, 0.55);
+    justify-self: center;
 }
 
 .deploy-section {
@@ -1069,12 +1047,17 @@ footer::before {
 
 @media (max-width: 1024px) {
     .deploy-hero {
-        flex-direction: column;
+        grid-template-columns: 1fr;
         text-align: center;
     }
 
     .deploy-hero-left {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .deploy-hero-copy {
+        align-items: center;
     }
 
     .deploy-hero-right {
@@ -1082,7 +1065,7 @@ footer::before {
     }
 
     .deploy-hero-badge {
-        width: clamp(200px, 45vw, 280px);
+        width: clamp(200px, 48vw, 280px);
     }
 }
 
